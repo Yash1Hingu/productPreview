@@ -12,11 +12,13 @@ html {
 
 .container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 .productprev{
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 650px;
@@ -90,6 +92,7 @@ html {
     border-radius: 10px;
     font-weight: 900;
     font-size: 18px;
+    outline: none;
 }
 
 .btn:hover{
@@ -98,4 +101,21 @@ html {
 .btn img{
     margin-right: 10px;
     width: 20px;
+}
+
+@media screen and (max-width:550px){
+    .container{
+        display: block;
+        height: auto;
+    }
+    .productprev{
+        display: block;
+        width: auto;
+        height: auto;
+        margin: 20px;
+    }
+    .productimg{
+        height: 300px;
+        border-radius: 20px 20px 0 0;
+    }
 }
